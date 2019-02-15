@@ -40,14 +40,23 @@
 			}
 
 			.navbar-brand {
-				padding: 15px;
+/*				padding: 15px;
 				margin-right: 10px;
-				margin-left: 20px;
+				margin-left: 20px;*/
 				background: #4898A2;
-				margin-left: 20px;
-				font-size: 40px;
-				color: white;
+/*			margin-left: 20px;
+				font-size: 40px;*/
 			}
+
+      		.box {
+      			min-height: 50px;
+      			padding: 15px;
+      			margin: 5px;
+      			font-size: 40px;
+      			font-weight: 800;
+      			color: white;
+      		}
+
 
 
 			.panel-body{
@@ -78,55 +87,80 @@
   				width: 70%;
 			}
 
+			.paragraph1{
+				margin-top:20px;
+				margin-bottom:10px;
+				margin-left: 20px;
+				margin-right:20px;
+				display: block;			
+			}
+			.paragraph2{
+				margin-top:20px;
+				margin-bottom:10px;
+				margin-left: 20px;
+				margin-right:20px;
+				display: block;			
+			}
+			.center{
+				margin-top:100px;
+				margin-bottom:10px;
+				margin-left: 20px;
+				margin-right:20px;
+				display: block;	
+			}
+
 		</style>
 	</head>
 
 	<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand box" href="index.html">Latitude</a>
+    </div>
 
-		<nav class="navbar navbar-default">
-  			<div class="container-fluid">
-    			<div class="navbar-header">
-    				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        					<span class="sr-only">Toggle navigation</span>
-        					<span class="icon-bar"></span>
-        					<span class="icon-bar"></span>
-        					<span class="icon-bar"></span>
-      					</button>
-      					<a class="navbar-brand" href="index.html">Latitude</a>
-    				</div>
-				</div>
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-right">
-       					<li class="dropdown">
-          					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
-          					<ul class="dropdown-menu">
-            					<li><a href="maxtemp.html">Max Temperature</a></li>
-            					<li><a href="humidity.html">Humidity</a></li>
-            					<li><a href="cloudiness.html">Cloudiness</a></li>
-            					<li><a href="windspeed.html">Wind Speed</a></li>
-          					</ul>
-        				</li>
-        				<li><a href="comparison.html">Comparisons</a></li>
-        				<li><a href="#">Data</a></li>
-      				</ul>
-    			</div>
-  			</div>
-		</nav>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="maxtemp.html">Max Temperature</a></li>
+            <li><a href="humidity.html">Humidity</a></li>
+            <li><a href="cloudiness.html">Cloudiness</a></li>
+            <li><a href="windspeed.html">Wind Speed</a></li>
+          </ul>
+        <li><a href="comparison.html">Comparison</a></li>
+        <li><a href="data.html">Data</a></li>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
 		<div class="container">
 			<div class="row">
 				<div class="col-md-7">
-					<div class="panel panel-default">
+					<div class="panel panel-default center">
   						<div class="panel-body">
 							<h1> Summary: Latitude vs. X </h1>
 							<hr>
-							<p><img class="img-summary" src="http://i64.tinypic.com/32zm63o" height="300" width="300" alt="maxtemp"> 
-							Archie Comic Publications, Inc. is an American comic book publisher headquartered in Pelham, New York.[5] The company is known for its many titles featuring fictional teenagers including Archie Andrews, Jughead Jones, Betty Cooper, Veronica Lodge, Reggie Mantle, Sabrina Spellman, and Josie and the Pussycats.
-
-							The company began in 1939 as MLJ Comics, which primarily published superhero comics. The initial Archie characters were created in 1941 by publisher John L. Goldwater and artist Bob Montana,[6] in collaboration with writer Vic Bloom.[7][8][9] They first appeared in Pep Comics #22 (cover-dated Dec. 1941).[7] With the creation of Archie, publisher John Goldwater hoped to appeal to fans of the Andy Hardy movies starring Mickey Rooney.[8]
-
-							Archie Comics was also the title of the company's longest-running publication, the first issue appearing with a cover date of Winter 1942. Starting with issue #114, the title was shortened to simply Archie. The flagship series was relaunched from issue #1 in July 2015 with a new look and design suited for a new generation of readers.[10] Archie Comics characters and concepts have also appeared in numerous films, television programs, cartoons, and video games.
+							<img class="img-summary" src="http://i64.tinypic.com/32zm63o" height="250" width="250" alt="maxtemp">
+							<div class="row"> 
+									<p class='paragraph1'>
+									The purpose of this project is to analyze the weather changes as you move closer to the equator. I pulled data from the OpenWeatherMap API and created a list of over 500 cities.
+									</p>
+									<p class='paragraph2'>
+									I plotted charts through Matplotlib that compared Latitude vs. Weather. The factors that were compared are max temperature, humidity, cloudiness and wind speed. This site is a visualization of the data in addition to an analysis of any trends found in the comparisons. 
+									</p>
+							</div>
 							</p>
 						</div>
 					</div>
@@ -168,7 +202,7 @@
 	</body>
 
 <!-- Footer -->
-	<footer class="page-footer font-small">
+	<footer class="fixed-bottom">
 		<hr class="footer-border">
 	</footer>
 <!-- Footer -->
